@@ -1,6 +1,5 @@
 // eslint.config.mjs
 import globals from 'globals';
-import jest from 'eslint-plugin-jest';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
@@ -13,11 +12,9 @@ export default defineConfig([
         ...globals.node,
       },
     },
-    plugins: {
-      jest,
-    },
+    plugins: ['jest'],
     rules: {
-      // Add base JavaScript rules here if needed
+      // Your general JS rules
     },
     extends: ['eslint:recommended'],
   },
@@ -28,11 +25,9 @@ export default defineConfig([
         ...globals.jest,
       },
     },
-    plugins: {
-      jest,
-    },
+    plugins: ['jest'],
     rules: {
-      // Add Jest-specific rules here if needed
+      // Jest-specific rules
     },
   },
   {
@@ -42,4 +37,5 @@ export default defineConfig([
     },
   },
 ]);
+
 
